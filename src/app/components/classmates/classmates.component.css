@@ -1,0 +1,53 @@
+.classmate-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.class-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.class-card h3 {
+  margin-top: 0;
+  color: #0056b3;
+}
+
+.no-data, .no-classmates {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.classmates-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.classmates-table th, .classmates-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.classmates-table th {
+  background-color: #0056b3;
+  color: white;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}

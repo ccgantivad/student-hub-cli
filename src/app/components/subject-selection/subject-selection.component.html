@@ -1,0 +1,25 @@
+<div class="subject-selection-container">
+  <h2>Selección de Materias</h2>
+
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+  <div class="subjects-list">
+    <div *ngFor="let subject of subjects" class="subject-item">
+      <label>
+        <input
+          type="checkbox"
+          [disabled]="subject.isDisabled"
+          (change)="toggleSubjectSelection(subject)"
+          [checked]="selectedSubjects.includes(subject.id)"
+        />
+        {{ subject.name }} - Profesor: {{ subject.teacherName }}
+      </label>
+    </div>
+  </div>
+  <button class="enroll-button" (click)="enrollSubjects()" [disabled]="selectedSubjects.length !== 3">
+    Inscribir Materias
+  </button>
+  <button class="clear-button" (click)="clearSelection()">
+    Limpiar Selección
+  </button>
+</div>

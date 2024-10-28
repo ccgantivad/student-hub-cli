@@ -1,0 +1,30 @@
+<div class="classmate-container">
+  <h2>Clases y Compañeros de Clase</h2>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <div *ngIf="classesWithClassmates.length === 0" class="no-data">
+    No se encontraron clases.
+  </div>
+
+  <div *ngFor="let classItem of classesWithClassmates" class="class-card">
+    <h3>{{ classItem.subjectName }}</h3>
+
+    <div *ngIf="classItem.classmates.length === 0" class="no-classmates">
+      No hay compañeros de clase en esta materia.
+    </div>
+
+    <table *ngIf="classItem.classmates.length > 0" class="classmates-table">
+      <thead>
+        <tr>
+          <th>Compañero de Clase</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let classmate of classItem.classmates">
+          <td>{{ classmate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

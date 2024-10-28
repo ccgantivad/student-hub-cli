@@ -1,0 +1,31 @@
+<div class="student-records-container">
+  <h2>Registros de Estudiantes</h2>
+
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+  <div *ngFor="let student of studentRecords" class="student-card">
+    <div class="student-info">
+      <h3>{{ student.fullName }}</h3>
+      <p class="program-name">{{ student.programName }}</p>
+    </div>
+
+    <div class="subjects-table-container">
+      <table class="subject-table">
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Profesor</th>
+            <th>Créditos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subject of student.subjects">
+            <td>{{ subject.name }}</td>
+            <td>{{ subject.teacherName }}</td>
+            <td>{{ subject.credits }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

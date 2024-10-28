@@ -1,0 +1,7 @@
+<nav *ngIf="showNavbar" class="navbar">
+  <div class="navbar-content">
+    <button class="home-button" (click)="goHome()">🏠 Home</button>
+    <span class="navbar-user">👤 {{ userName }}</span>
+    <button class="logout-button" (click)="logout()">🔓 Cerrar Sesión</button>
+  </div>
+</nav>
